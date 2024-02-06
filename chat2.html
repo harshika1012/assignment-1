@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        * {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+    </div>
+    <div class="blog" id="blog2" style="margin-left: 5%;">
+        <h2>Post2:</h2>
+        <div class="like-counter">
+            <img src="post2.jpeg" style="height: 300px;"><br>
+            <span class="like-btn" onclick="like('blog2')">❤️</span>
+            <span id="likeCount_blog2"> likes</span>
+        </div>
+        <div class="comments-section" style="margin-left: 5%;">
+            <p>The first That I found in internet is this building. From seeing this in website a year ago to looking it
+                everyday, makes me feel happy. My days in this college are really moving very fast along with creating
+                new memories. Let's move on together to achieve good things in this life.<br><br>The walks in the middle of
+                night  irreplacable.</p>
+            <h3>Comments</h3>
+            <p>View is awesome</p>
+            <p>Is this Nilgiri?</p>
+            <p> Reply: Yup!</p>
+            <p>I agree with you----coz I was there at that time, felt the same----soul</p>
+        </div>
+    </div>
+
+    <script>
+        function like(blogId) {
+            let likeCount = parseInt(localStorage.getItem(`${blogId}_likes`)) || 0;
+            likeCount++;
+            localStorage.setItem(`${blogId}_likes`, likeCount);
+            document.getElementById(`likeCount_${blogId}`).innerText = `${likeCount} likes`;
+        }
+    </script>
+
+</body>
+
+</html>

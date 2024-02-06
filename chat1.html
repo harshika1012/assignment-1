@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        * {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+    </div>
+    <div class="blog" id="blog1" style="margin-left: 5%;">
+        <h2>Post1:</h2>
+        <div class="like-counter">
+            <img src="post.jpg" style="height: 400px;"><br>
+            <!-- <span class="like-btn" onclick="like('blog1')">👍</span> -->
+            <span class="like-btn" onclick="like('blog1')">❤️</span>
+            <span id="likeCount_blog1"> likes</span>
+        </div>
+        <div class="comments-section" style="margin-left: 5%;">
+            <p>From the graceful petals of a rose to the intricate patterns of a sunflower, each flower tells a story of
+                beauty and resilience. Whether adorning gardens, bouquets, or special events, flowers have the
+                remarkable ability to evoke joy, convey messages, and bring a sense of tranquility.They will convey the message of nature's beauty.Try to fall in love with nature. It will be the best feeling in the whole universe.</p>
+            <h3>Comments</h3>
+            <p>Looking cool</p>
+            <p>Nature is beautiful</p>
+            <p>Can I get this?</p>
+            <p> Reply: Should give it to my mom -------- coz it is a coriander leaf</p>
+            <img src="flower2.jpeg" style="height: 400px;">
+        </div>
+    </div>
+
+    <script>
+        function like(blogId) {
+            let likeCount = parseInt(localStorage.getItem(`${blogId}_likes`)) || 0;
+            likeCount++;
+            localStorage.setItem(`${blogId}_likes`, likeCount);
+            document.getElementById(`likeCount_${blogId}`).innerText = `${likeCount} likes`;
+        }
+    </script>
+
+</body>
+
+</html>
