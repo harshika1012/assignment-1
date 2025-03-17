@@ -25,26 +25,6 @@ This project is a personal website built using HTML, CSS, and JavaScript as part
 - **Flexbox Layout**: Used for efficient content organization.
 - **Animations and Transforms**: Enhances user experience with smooth transitions and effects.
 
-## Deployment
-The website is deployed at:
-- **GitHub Pages**: [Insert GitHub.io Page Link]
-- **IIIT Web Server**: [Insert IIIT Web Link]
-
-### Steps to Deploy on IIIT Web Server
-1. Copy the website files using:
-   ```sh
-   scp -r * <firstname>.<lastname>@web.iiit.ac.in:~/public_html
-   ```
-2. SSH into the server:
-   ```sh
-   ssh <firstname>.<lastname>@web.iiit.ac.in
-   ```
-3. Set the necessary file permissions:
-   ```sh
-   chmod -R a+rx ~
-   ```
-4. Access the website at: `https://web.iiit.ac.in/~<username>/`
-
 ## Technologies Used
 - **HTML**: Structure of the website.
 - **CSS**: Styling and layout.
